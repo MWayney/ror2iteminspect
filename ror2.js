@@ -1,4 +1,10 @@
 $(document).ready(function() {
+//viewport Resize event for dealing with MOBILE
+window.addEventListener('resize', () => {
+    //Create vh variable with value = 1% of viewport
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
 //Filter functions
 //Toggle DLC
 $(".dlc_check").click(function() {
