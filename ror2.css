@@ -16,7 +16,8 @@
         display: block;
         background-color: darkslateblue;
         position: sticky;
-        bottom: 0;
+        /* Position calculated dynamically as per address bar display */
+        bottom: var(--vh, 0vh);
         height: 180px;
     }
     #sidebar fieldset {
