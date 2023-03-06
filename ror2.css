@@ -2,17 +2,22 @@
     -On bottom for mobile/portrait
     -On side for desktop/landscape */
 /* MOBILE / SCALED WINDOW*/
-@media screen and (max-width: 850px){    
+@media screen and (max-width: 850px){
+    /* Remove empty from html and body elements */
+    html, body {
+        margin: 0;
+        padding: 0;
+    }
+    /* Tooltip design for BOTTOM of the page */
     img {
         width: 80px;
     } 
     #sidebar {
+        display: block;
         background-color: darkslateblue;
         position: sticky;
         bottom: 0;
-        width: 100%;
         height: 180px;
-        margin: 0;
     }
     #sidebar fieldset {
         display: none;
@@ -24,9 +29,16 @@
     #itemDisplay img {
         width: 120px;
     }
+    .container, h2 {
+        padding-inline: 8px;
+    }
+    #topBar {
+        margin: 8px;
+    }
 }
 /* DESKTOP / FULLSCREEN */
 @media screen and (min-width: 851px){
+    /* Tooltip design for LEFT of the page */
     img {
         width: 100px;
     }    
@@ -43,7 +55,7 @@
         position: relative;
         left: 300px;
         /* Calc width = viewport width - sidebar width + #main margin size */
-        width: calc(100vw - 322px);
+        width: calc(100vw - 328px);
     }
     #synergy {
         position: absolute;
@@ -68,11 +80,9 @@
 }
 /* ALL */
 * {
-    box-sizing: border-box;
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Courier New';
 }
 body {
-    margin: 4px;
     background-image: url(images/1202420.jpg);
     background-attachment: fixed;
     background-position: center;
@@ -91,7 +101,7 @@ p {
     text-align: center;
 }
 .container div {
-    display: inline-table;
+    display: inline-block;
     margin: 4px auto;
     border-radius: 15px;
 }
