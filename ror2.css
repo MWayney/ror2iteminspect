@@ -8,9 +8,9 @@
     } 
     #sidebar {
         background-color: darkslateblue;
-        position: fixed;
+        position: sticky;
         left: 0;
-        bottom: 0;
+        bottom: 0vh;
         width: 100%;
         height: 180px;
         margin: 0;
