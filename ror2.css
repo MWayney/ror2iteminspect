@@ -1,0 +1,156 @@
+/* Media queries to determine "Description sidebar"
+    -On bottom for mobile/portrait
+    -On side for desktop/landscape */
+/* MOBILE / SCALED WINDOW*/
+@media screen and (max-width: 850px){    
+    img {
+        width: 80px;
+    } 
+    #sidebar {
+        background-color: darkslateblue;
+        position: sticky;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 180px;
+        margin: 0;
+    }
+    #sidebar fieldset {
+        display: none;
+    }
+    #itemDisplay {
+        float: left;
+        margin-inline: 8px;
+    }
+    #itemDisplay img {
+        width: 120px;
+    }
+}
+/* DESKTOP / FULLSCREEN */
+@media screen and (min-width: 851px){
+    img {
+        width: 100px;
+    }    
+    #sidebar {
+        background-color: darkslateblue;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        text-align: center;
+    }
+    #main {
+        position: relative;
+        left: 300px;
+        /* Calc width = viewport width - sidebar width + #main margin size */
+        width: calc(100vw - 322px);
+    }
+    #synergy {
+        position: absolute;
+        bottom: 110px;
+        width: 265px;
+    }
+    #synergy img {
+        display: inline-table;
+        width: 30px;
+    }
+    #filter {
+        position: absolute;
+        bottom: 10px;
+        width: 265px;
+    }
+    #itemDisplay img {
+        width: 180px;
+    }
+    #topBar {
+        display: none;
+    }
+}
+/* ALL */
+* {
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+}
+body {
+    margin: 4px;
+    background-image: url(images/1202420.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+h2 {
+    margin: 10px 0;
+    border-bottom: solid 3px;
+}
+p {
+    text-align: left;
+    margin: 8px;
+}
+/* Container stylings */
+.container {
+    text-align: center;
+}
+.container div {
+    display: inline-table;
+    margin: 4px auto;
+    border-radius: 15px;
+}
+/* Border colours of item variations */
+.common {
+    border: solid 2px;
+    border-color: rgba(150, 150, 150, 0.7);
+    background-color: rgba(150, 150, 150, 0.3);
+}
+.uncommon {
+    border: solid 2px;
+    border-color: rgba(20, 130, 0, 0.7);
+    background-color: rgba(20, 130, 0, 0.3);
+}
+.legendary {
+    border: solid 2px;
+    border-color: rgba(200, 0, 0, 0.7);
+    background-color: rgba(200, 0, 0, 0.3);
+}
+.boss {
+    border: solid 2px;
+    border-color: rgba(255, 220, 100, 0.7);
+    background-color: rgba(255, 220, 100, 0.3);
+}
+.lunar {
+    border: solid 2px;
+    border-color: rgba(90, 180, 255, 0.7);
+    background-color: rgba(90, 180, 255, 0.3);
+}
+.equipment {
+    border: solid 2px;
+    border-color: rgba(200, 90, 0, 0.7);
+    background-color: rgba(200, 90, 0, 0.3);
+}
+.void {
+    border: solid 2px;
+    border-color: rgba(235, 75, 255, 0.7);
+    background-color: rgba(235, 75, 255, 0.3);
+}
+/* Colour styles for highlighting text in item description */
+/* Damage Numbers */
+.dmg {
+    color:gold;
+}
+/* HP Increase */
+.hpUP {
+    color:lawngreen;
+}
+/* HP Threshold */
+.hpLimit {
+    color:firebrick;
+}
+/* Utility */
+.util {
+    color:cyan;
+}
+/* Stacking */
+.stack {
+    font-style: oblique;
+    color:grey;
+}
