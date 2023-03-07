@@ -2,7 +2,7 @@
     -On bottom for mobile/portrait
     -On side for desktop/landscape */
 /* MOBILE / SCALED WINDOW*/
-@media screen and (max-width: 850px){
+@media screen and (max-width: 768px){
     /* Remove empty from html and body elements */
     html, body {
         margin: 0;
@@ -15,10 +15,10 @@
     #sidebar {
         display: block;
         background-color: darkslateblue;
-        position: sticky;
-        /* Position calculated dynamically as per address bar display */
-        bottom: var(--vh, 0vh);
+        position: fixed;
+        bottom: 0;
         height: 180px;
+        width: 100%;
     }
     #sidebar fieldset {
         display: none;
@@ -38,7 +38,7 @@
     }
 }
 /* DESKTOP / FULLSCREEN */
-@media screen and (min-width: 851px){
+@media screen and (min-width: 769px){
     /* Tooltip design for LEFT of the page */
     img {
         width: 100px;
@@ -52,7 +52,7 @@
         height: 100%;
         text-align: center;
     }
-    #main {
+    #items {
         position: relative;
         left: 300px;
         /* Calc width = viewport width - sidebar width + #main margin size */
@@ -84,10 +84,12 @@
     font-family:'Courier New';
 }
 body {
-    background-image: url(images/1202420.jpg);
+    background-image: url(images/ar0agg22swatch.jpg);
     background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat;
+}
+h2, p, legend, label {
+    color: antiquewhite;
 }
 h2 {
     margin: 10px 0;
