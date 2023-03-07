@@ -42,17 +42,22 @@ function sidebarReset() {
     $("#itemDescription").empty();
 };
 
-//ResizeObserver API watches size change of element
+//Event Listener tied to resizing of #main element when scaling window
 //Used for adding extra space to the bottom of <body> so that items are unobscured by 'fixed' sidebar
 function resizeHeight () {
     let elemHeight = $("#main").height();
     //JS Media Query to perform function only when viewport is 768px or less
     let phoneMedia = window.matchMedia("(max-width: 768px)");
     if (phoneMedia.matches) {
-        document.body.style.height = elemHeight + 184 +"px";
-    }
+        document.body.style.height = elemHeight + 200 +"px";
+    } else {
+        document.body.style.height = elemHeight + "px";
+    };
 };
-new ResizeObserver(resizeHeight).observe(main);
+$(window).on("load", function() {
+    resizeHeight();
+});
+window.addEventListener('resize', resizeHeight);
 
 //~1674 lines for every item
 //---------------------------   COMMON    -------------------------------------------
@@ -325,7 +330,7 @@ $("#berzerkers_pauldron").mouseleave(sidebarReset);
 //Chronobauble
 $("#chronobauble").mouseenter(function(){
     sidebarReset();
-    itemDisplay.call(this,  "chronobauble",
+    itemDisplay.call(this,  "Chronobauble",
                             "<span class='util'>Slow</span> enemies on hit for <span class='util'>-60% movement speed</span> for <span class='util'>2s</span> <span class='stack'>(+2s per stack)</span>."
                     );
 });
@@ -434,4 +439,94 @@ $("#old_war_stealthkit").mouseenter(function(){
                     );
 });
 $("#old_war_stealthkit").mouseleave(sidebarReset);
+//Predatory Instincts
+$("#predatory_instincts").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Predatory Instincts",
+                            "Gain <span class='dmg'>5% critical chance</span>. <span class='dmg'>Critical strikes</span> increase <span class='dmg'>attack speed</span> by <span class='dmg'>+12%</span>. Maximum cap of <span class='dmg'>36%</span> <span class='stack'>(+24% per stack)</span> <span class='dmg'>attack speed</span>."
+                    );
 });
+$("#predatory_instincts").mouseleave(sidebarReset);
+//------------------------------   LUNAR    ------------------------------------------
+//Beads of Fealty
+$("#beads_of_fealty").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Beads of Fealty",
+                            "Seems to do nothing... <span class='hpLimit'>but...</span> When you activate <span class='util'>The Obelisk</span> you are transported to <span class='util'>A Moment, Whole</span> before <span class='hpLimit'>ending the run</span>. <span class='stack'>(No benefit on stack)</span>."
+                    );
+});
+$("#beads_of_fealty").mouseleave(sidebarReset);
+//Brittle Crown
+$("#brittle_crown").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Brittle Crown",
+                            "<span class='util'>+30% chance on hit</span> to gain <span class='util'>2</span> <span class='stack'>(+2 per stack)</span> <span class='util'>gold</span>. <span class='util'>Gold earnt</span> scales as <span class='util'>12% cost</span> of a <span class='util'>small chest</span>. <br><span class='hpLimit'>Lose gold</span> equal to <span class='hpLimit'>100%</span> <span class='stack'>(+100% per stack)</span> of <span class='hpLimit'>maximum health percentage</span> you lost <span class='hpLimit'>from damage</span>."
+                    );
+});
+$("#brittle_crown").mouseleave(sidebarReset);
+//Corpsebloom
+$("#corpsebloom").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Corpsebloom",
+                            "<span class='hpUP'>Heal 100%</span> <span class='stack'>(+100% per stack)</span> more. <span class='hpUP'>All healing</span> is <span class='util'>applied over time</span>. Can <span class='hpUP'>heal</span> for a <span class='hpUP'>maximum of 10%</span> <span class='stack'>(-50% per stack)</span> of your <span class='hpUP'>health per second</span>."
+                    );
+});
+$("#corpsebloom").mouseleave(sidebarReset);
+//Defiant Gouge
+$("#defiant_gouge").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Defiant Gouge",
+                            "Using a <span class='util'>Shrine</span> summons <span class='hpLimit'>enemies</span> <span class='stack'>(stronger per stack)</span> nearby. <span class='util'>Scales over time</span>."
+                    );
+});
+$("#defiant_gouge").mouseleave(sidebarReset);
+//Egocentrism
+$("#egocentrism").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Egocentrism",
+                            "Every <span class='util'>3s</span> <span class='stack'>(-50% per stack)</span>, gain an <span class='util'>orbiting bomb</span> that detonates on impact for <span class='dmg'>360% damage</span>, up to a <span class='util'>maximum of 3 bombs</span> <span class='stack'>(+1 per stack)</span>. Every <span class='util'>60s</span>, a random item is <span class='util'>converted</span> into this item."
+                    );
+});
+$("#egocentrism").mouseleave(sidebarReset);
+//Essence of Heresy
+$("#essence_of_heresy").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Essence of Heresy",
+                            "<span class='util'>Replace your Special Skill</span> with <span class='util'>Ruin</span>.<br><span class='dmg'>Dealing damage</span> adds a <span class='util'>stack of Ruin</span> for <span class='util'>10s</span> <span class='stack'>(+10 per stack)</span>. Activating the skill <span class='dmg'>detonates all stacks</span> dealing <span class='dmg'>300% damage +120% damage per stack of Ruin</span>. <span class='util'>Recharges after 8s</span> <span class='stack'>(+8s per stack)</span>."
+                    );
+});
+$("#essence_of_heresy").mouseleave(sidebarReset);
+//Eulogy Zero
+$("#eulogy_zero").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Eulogy Zero",
+                            "Items have a <span class='util'>5%</span> <span class='stack'>(+5% per stack)</span> <span class='util'>chance</span> to become a <span style='color:rgb(90, 160, 255);font-weight: bold'>Lunar</span> item instead."
+                    );
+});
+$("#eulogy_zero").mouseleave(sidebarReset);
+//Focused Convergence
+$("#focused_convergence").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Focused Convergence",
+                            "<span class='util'>Teleporters charge 30%</span> <span class='stack'>(+30% per stack)</span> <span class='util'>faster</span>, but the size of the <span class='util'>Teleporter zone</span> is <span class='hpLimit'>50%</span> <span class='stack'>(-50% per stack)</span> <span class='hpLimit'>smaller</span>."
+                    );
+});
+$("#focused_convergence").mouseleave(sidebarReset);
+//Gesture of the Drowned
+$("#gesture_of_drowned").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Gesture of the Drowned",
+                            "<span class='util'>Reduce Equipment cooldown</span> by <span class='util'>50%</span> <span class='stack'>(+15% per stack)</span>. <span class='util'>Equipment activates on cooldown</span>."
+                    );
+});
+$("#gesture_of_drowned").mouseleave(sidebarReset);
+//Hooks of Heresy
+$("#hooks_of_heresy").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Hooks of Heresy",
+                            "<span class='util'>Replace your Secondary Skill</span> with <span class='util'>Slicing Maelstrom</span>.<br><span class='dmg'>Charge a projectile</span> that deals <span class='dmg'>875% damage per second</span> to nearby enemies, exploding after <span class='util'>3s</span> to deal <span class='dmg'>700% damage</span> and <span class='util'>root enemies</span> for <span class='util'>3s</span> <span class='stack'>(+3s per stack)</span>. <span class='util'>Recharges after 5s</span> <span class='stack'>(+5s per stack)</span>."
+                    );
+});
+$("#hooks_of_heresy").mouseleave(sidebarReset);
+});
+
