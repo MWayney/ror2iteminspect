@@ -2,7 +2,7 @@
     -On bottom for mobile/portrait
     -On side for desktop/landscape */
 /* MOBILE / SCALED WINDOW*/
-@media screen and (max-width: 768px){
+@media (max-width: 768px){
     /* Remove empty from html and body elements */
     html, body {
         margin: 0;
@@ -35,6 +35,22 @@
     }
     #topBar {
         margin: 8px;
+    }
+    @media (max-width: 320px){
+        img {
+            width: 60px;
+        }
+        #itemDisplay img {
+            display: none;
+        }
+    }
+    @media (max-width: 375px){
+        img {
+            width: 60px;
+        }
+        #itemDisplay img {
+            width: 100px;
+        }
     }
 }
 /* DESKTOP / FULLSCREEN */
