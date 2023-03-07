@@ -1,10 +1,4 @@
 $(document).ready(function() {
-//viewport Resize event for dealing with MOBILE
-window.addEventListener('resize', () => {
-    //Create vh variable with value = 1% of viewport
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
 //Filter functions
 //Toggle DLC
 $(".dlc_check").click(function() {
@@ -47,6 +41,18 @@ function sidebarReset() {
     $("#itemDisplay").empty();
     $("#itemDescription").empty();
 };
+
+//ResizeObserver API watches size change of element
+//Used for adding extra space to the bottom of <body> so that items are unobscured by 'fixed' sidebar
+function resizeHeight () {
+    let elemHeight = $("#main").height();
+    //JS Media Query to perform function only when viewport is 768px or less
+    let phoneMedia = window.matchMedia("(max-width: 768px)");
+    if (phoneMedia.matches) {
+        document.body.style.height = elemHeight + 180 +"px";
+    }
+};
+new ResizeObserver(resizeHeight).observe(main);
 
 //~1674 lines for every item
 //---------------------------   COMMON    -------------------------------------------
