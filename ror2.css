@@ -2,7 +2,7 @@
     -On bottom for mobile/portrait
     -On side for desktop/landscape */
 /* MOBILE / SCALED WINDOW*/
-@media (max-width: 768px){
+@media (max-width: 1023px){
     /* Remove empty from html and body elements */
     html, body {
         margin: 0;
@@ -14,10 +14,10 @@
     } 
     #sidebar {
         display: block;
-        background-color: darkslateblue;
+        background-color: rgb(72, 61, 139);
         position: fixed;
         bottom: 0;
-        height: 180px;
+        height: 200px;
         width: 100%;
     }
     #sidebar fieldset {
@@ -44,23 +44,23 @@
             display: none;
         }
     }
-    @media (max-width: 375px){
+    @media (max-width: 425px) and (min-width: 321px){
         img {
-            width: 60px;
+            width: 70px;
         }
         #itemDisplay img {
-            width: 100px;
+            display: none;
         }
     }
 }
 /* DESKTOP / FULLSCREEN */
-@media screen and (min-width: 769px){
+@media screen and (min-width: 1024px){
     /* Tooltip design for LEFT of the page */
     img {
         width: 100px;
     }    
     #sidebar {
-        background-color: darkslateblue;
+        background-color: rgb(72, 61, 139);
         position: fixed;
         left: 0;
         top: 0;
@@ -93,6 +93,20 @@
     }
     #topBar {
         display: none;
+    }
+    p {
+        font-size: 20px;
+    }
+    @media (max-width: 1279px){
+        #synergy img {
+            width: 25px;
+        }
+        #itemDisplay img {
+            width: 130px;
+        }
+        p {
+            font-size: 16px;
+        }
     }
 }
 /* ALL */
@@ -163,22 +177,22 @@ p {
 /* Colour styles for highlighting text in item description */
 /* Damage Numbers */
 .dmg {
-    color:gold;
+    color:rgb(255, 215, 0);
 }
 /* HP Increase */
 .hpUP {
-    color:lawngreen;
+    color:rgb(124, 252, 0);
 }
 /* HP Threshold */
 .hpLimit {
-    color:firebrick;
+    color:rgb(199, 22, 22);
 }
 /* Utility */
 .util {
-    color:cyan;
+    color:rgb(0, 255, 255);
 }
 /* Stacking */
 .stack {
     font-style: oblique;
-    color:grey;
+    color:rgb(128, 128, 128);
 }
