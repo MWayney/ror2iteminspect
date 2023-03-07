@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
     <head>
         <!-- Page title and short description -->
         <title>RoR2 Item Table</title>
@@ -20,143 +20,145 @@
     </head>
 
     <body>
-        <!-- MOBILE ONLY Fieldset for filters -->
-        <div id="topBar">
-            <fieldset>
-                <legend>Item Filter:</legend>
-                <input class="dlc_check" type="checkbox" name="DLC" checked><label for="DLC">Show DLC</label>
-                <input class="common_check" type="checkbox" name="COMMONS" checked><label for="DLC">Common</label>
-                <input class="uncommon_check" type="checkbox" name="UNCOMMONS" checked><label for="DLC">Uncommon</label>
-                <input class="legendary_check" type="checkbox" name="LEGENDARYS" checked><label for="DLC">Legendary</label>
-                <input class="boss_check" type="checkbox" name="BOSS" checked><label for="DLC">Boss</label>
-                <input class="lunar_check" type="checkbox" name="LUNARS" checked><label for="DLC">Lunar</label>
-            </fieldset>
-        </div>
-        <!-- 2 column design; "sidebar" div and "main" div -->
         <div id="main">
-            <!-- BASE: 113 Passive & 26 Active-->
-            <!-- DLC: 35 Passive & 6 Active -->
-            <h2>PASSIVE ITEMS</h2>
-            <div id="passiveItem" class="container">
-                <!-- Class for each rarity & class to specify DLC -->
-                <!-- COMMONS -->
-                <div id="armor_piercing_rounds" class="common"><img src="images/items/armor_piercing_rounds.png"/></div>
-                <div id="backup_magazine" class="common"><img src="images/items/backup_magazine.png"/></div>
-                <div id="bison_steak" class="common"><img src="images/items/bison_steak.png"/></div>
-                <div id="bundle_of_fireworks" class="common"><img src="images/items/bundle_of_fireworks.png"/></div>
-                <div id="bustling_fungus" class="common"><img src="images/items/bustling_fungus.png"/></div>
-                <div id="cautious_slug" class="common"><img src="images/items/cautious_slug.png"/></div>
-                <div id="crowbar" class="common"><img src="images/items/crowbar.png"/></div>
-                <div id="delicate_watch" class="common dlc"><img src="images/items/Delicate_Watch.png"/></div>
-                <div id="energy_drink" class="common"><img src="images/items/energy_drink.png"/></div>
-                <div id="focus_crystal" class="common"><img src="images/items/Focus_Crystal.png"/></div>
-                <div id="gasoline" class="common"><img src="images/items/gasoline.png"/></div>
-                <div id="lens_maker_glasses" class="common"><img src="images/items/lens_maker_glasses.png"/></div>
-                <div id="medkit" class="common"><img src="images/items/medkit.png"/></div>
-                <div id="mocha" class="common dlc"><img src="images/items/Mocha.png"/></div>
-                <div id="monster_tooth" class="common"><img src="images/items/monster_tooth.png"/></div>
-                <div id="oddly_shaped_opal" class="common dlc"><img src="images/items/Oddly-shaped_Opal.png"/></div>
-                <div id="pauls_goat_hoof" class="common"><img src="images/items/pauls_goat_hoof.png"/></div>
-                <div id="personal_shield_generator" class="common"><img src="images/items/personal_shield_generator.png"/></div>
-                <div id="power_elixir" class="common dlc"><img src="images/items/Power_Elixir.png"/></div>
-                <div id="repulsion_armor_plate" class="common"><img src="images/items/Repulsion_Armor_Plate.png"/></div>
-                <div id="roll_of_pennies" class="common dlc"><img src="images/items/Roll_of_Pennies.png"/></div>
-                <div id="rusted_key" class="common"><img src="images/items/rusted_key.png"/></div>
-                <div id="soldier_syringe" class="common"><img src="images/items/soldier_syringe.png"/></div>
-                <div id="sticky_bomb" class="common"><img src="images/items/sticky_bomb.png"/></div>
-                <div id="stun_grenade" class="common"><img src="images/items/stun_grenade.png"/></div>
-                <div id="topaz_brooch" class="common"><img src="images/items/topaz_brooch.png"/></div>
-                <div id="tougher_times" class="common"><img src="images/items/tougher_times.png"/></div>
-                <div id="tri_tip_dagger" class="common"><img src="images/items/tri_tip_dagger.png"/></div>
-                <div id="warbanner" class="common"><img src="images/items/warbanner.png"/></div>
-                <!-- UNCOMMONS -->
-                <div id="atg_missile_mk" class="uncommon"><img src="images/items/AtG_Missile_Mk._1.png"/></div>
-                <div id="bandolier" class="uncommon"><img src="images/items/Bandolier.png"/></div>
-                <div id="berzerkers_pauldron" class="uncommon"><img src="images/items/Berzerkers_Pauldron.png"/></div>
-                <div id="chronobauble" class="uncommon"><img src="images/items/Chronobauble.png"/></div>
-                <div id="death_mark" class="uncommon"><img src="images/items/Death_Mark.png"/></div>
-                <div id="fuel_cell" class="uncommon"><img src="images/items/Fuel_Cell.png"/></div>
-                <div id="ghors_tome" class="uncommon"><img src="images/items/Ghors_Tome.png"/></div>
-                <div id="harvesters_scythe" class="uncommon"><img src="images/items/Harvesters_Scythe.png"/></div>
-                <div id="hopoo_feather" class="uncommon"><img src="images/items/Hopoo_Feather.png"/></div>
-                <div id="hunters_harpoon" class="uncommon dlc"><img src="images/items/Hunters_Harpoon.png"/></div>
-                <div id="ignition_tank" class="uncommon dlc"><img src="images/items/Ignition_Tank.png"/></div>
-                <div id="infusion" class="uncommon"><img src="images/items/Infusion.png"/></div>
-                <div id="kjaros_band" class="uncommon"><img src="images/items/Kjaros_Band.png"/></div>
-                <div id="leeching_seed" class="uncommon"><img src="images/items/Leeching_Seed.png"/></div>
-                <div id="lepton_daisy" class="uncommon"><img src="images/items/Lepton_Daisy.png"/></div>
-                <div id="old_guillotine" class="uncommon"><img src="images/items/Old_Guillotine.png"/></div>
-                <div id="old_war_stealthkit" class="uncommon"><img src="images/items/Old_War_Stealthkit.png"/></div>
-                <div id="predatory_instincts" class="uncommon"><img src="images/items/Predatory_Instincts.png"/></div>
-                <div id="razorwire" class="uncommon"><img src="images/items/Razorwire.png"/></div>
-                <div id="red_whip" class="uncommon"><img src="images/items/Red_Whip.png"/></div>
-                <div id="regenerating_scrap" class="uncommon dlc"><img src="images/items/Regenerating_Scrap.png"/></div>
-                <div id="rose_buckler" class="uncommon"><img src="images/items/Rose_Buckler.png"/></div>
-                <div id="runalds_band" class="uncommon"><img src="images/items/Runalds_Band.png"/></div>
-                <div id="shipping_request_form" class="uncommon dlc"><img src="images/items/Shipping_Request_Form.png"/></div>
-                <div id="shuriken" class="uncommon dlc"><img src="images/items/Shuriken.png"/></div>
-                <div id="squid_polyp" class="uncommon"><img src="images/items/Squid_Polyp.png"/></div>
-                <div id="ukulele" class="uncommon"><img src="images/items/Ukulele.png"/></div>
-                <div id="war_horn" class="uncommon"><img src="images/items/War_Horn.png"/></div>
-                <div id="wax_quail" class="uncommon"><img src="images/items/Wax_Quail.png"/></div>
-                <div id="will_o_wisp" class="uncommon"><img src="images/items/Will-o-the-wisp.png"/></div>
-                <!-- LEGENDARYS -->
-                <div id="57_leaf_clover" class="legendary"><img src="images/items/57_Leaf_Clover.png"/></div>
-                <div id="aegis" class="legendary"><img src="images/items/Aegis.png"/></div>
-                <div id="alien_head" class="legendary"><img src="images/items/Alien_Head.png"/></div>
-                <div id="bens_raincoat" class="legendary dlc"><img src="images/items/Bens_Raincoat.png"/></div>
-                <div id="bottled_chaos" class="legendary dlc"><img src="images/items/Bottled_Chaos.png"/></div>
-                <div id="brainstalks" class="legendary"><img src="images/items/Brainstalks.png"/></div>
-                <div id="brilliant_behemoth" class="legendary"><img src="images/items/Brilliant_Behemoth.png"/></div>
-                <div id="ceremonial_dagger" class="legendary"><img src="images/items/Ceremonial_Dagger.png"/></div>
-                <div id="defensive_microbots" class="legendary"><img src="images/items/Defensive_Microbots.png"/></div>
-                <div id="dios_best_friend" class="legendary"><img src="images/items/Dios_Best_Friend.png"/></div>
-                <div id="frost_relic" class="legendary"><img src="images/items/Frost_Relic.png"/></div>
-                <div id="h3ad_5t_v2" class="legendary"><img src="images/items/H3AD-5T_v2.png"/></div>
-                <div id="happiest_mask" class="legendary"><img src="images/items/Happiest_Mask.png"/></div>
-                <div id="hardlight_afterburner" class="legendary"><img src="images/items/Hardlight_Afterburner.png"/></div>
-                <div id="interstellar_desk_plant" class="legendary"><img src="images/items/Interstellar_Desk_Plant.png"/></div>
-                <div id="laser_scope" class="legendary dlc"><img src="images/items/Laser_Scope.png"/></div>
-                <div id="n_kuhanas_opinion" class="legendary"><img src="images/items/N27s_Opinion.png"/></div>
-                <div id="pocket_icbm" class="legendary dlc"><img src="images/items/Pocket_I.C.B.M..png"/></div>
-                <div id="rejuvenation_rack" class="legendary"><img src="images/items/Rejuvenation_Rack.png"/></div>
-                <div id="resonance_disc" class="legendary"><img src="images/items/Resonance_Disc.png"/></div>
-                <div id="sentient_meat_hook" class="legendary"><img src="images/items/Sentient_Meat_Hook.png"/></div>
-                <div id="shattering_justice" class="legendary"><img src="images/items/Shattering_Justice.png"/></div>
-                <div id="soulbound_catalyst" class="legendary"><img src="images/items/Soulbound_Catalyst.png"/></div>
-                <div id="spare_drone_parts" class="legendary dlc"><img src="images/items/Spare_Drone_Parts.png"/></div>
-                <div id="symbiotic_scorpion" class="legendary dlc"><img src="images/items/Symbiotic_Scorpion.png"/></div>
-                <div id="unstable_tesla_coil" class="legendary"><img src="images/items/Unstable_Tesla_Coil.png"/></div>
-                <div id="wake_of_vultures" class="legendary"><img src="images/items/Wake_of_Vultures.png"/></div>
-                <!-- BOSS -->
-                <div id="" class="boss"><img src="images/items/"/></div>
-                <!-- LUNARS -->
-                <div id="" class="lunar"><img src="images/items/"/></div>
+            <!-- MOBILE ONLY Fieldset for filters -->
+            <div id="topBar">
+                <fieldset>
+                    <legend>Item Filter:</legend>
+                        <label for="DLC"><input class="dlc_check" type="checkbox" name="DLC" checked>Show DLC</label>
+                        <label for="COMMONS"><input class="common_check" type="checkbox" name="COMMONS" checked>Common</label>
+                        <label for="UNCOMMONS"><input class="uncommon_check" type="checkbox" name="UNCOMMONS" checked>Uncommon</label>
+                        <label for="LEGENDARYS"><input class="legendary_check" type="checkbox" name="LEGENDARYS" checked>Legendary</label>
+                        <label for="BOSS"><input class="boss_check" type="checkbox" name="BOSS" checked>Boss</label>
+                        <label for="LUNARS"><input class="lunar_check" type="checkbox" name="LUNARS" checked>Lunar</label>
+                </fieldset>
             </div>
-            <h2>EQUIPMENT</h2>
-            <div id="activeItem" class="container">
-                <!-- Class for equipment & class to specify DLC -->
-                <!-- STANDARD -->
-                <div id="blast_shower" class="equipment"><img src="images/items/Blast_Shower.png"/></div>
-                <div id="disposable_missile_launcher" class="equipment"><img src="images/items/Disposable_Missile_Launcher.png"/></div>
-                <div id="eccentric_vase" class="equipment"><img src="images/items/Eccentric_Vase.png"/></div>
-                <div id="executive_card" class="equipment dlc"><img src="images/items/Executive_Card.png"/></div>
-                <div id="foreign_fruit" class="equipment"><img src="images/items/Foreign_Fruit.png"/></div>
-                <div id="forgive_me_please" class="equipment"><img src="images/items/Forgive_Me_Please.png"/></div>
-                <div id="" class="equipment"><img src="images/items/"/></div>
-                <!-- LUNAR -->
-                <div id="" class="lunar"><img src="images/items/"/></div>
+            <!-- 2 column design; "sidebar" div and "main" div -->
+            <div id="items">
+                <!-- BASE: 113 Passive & 26 Active-->
+                <!-- DLC: 35 Passive & 6 Active -->
+                <h2>PASSIVE ITEMS</h2>
+                <div id="passiveItem" class="container">
+                    <!-- Class for each rarity & class to specify DLC -->
+                    <!-- COMMONS -->
+                    <div id="armor_piercing_rounds" class="common"><img src="images/items/armor_piercing_rounds.png"/></div>
+                    <div id="backup_magazine" class="common"><img src="images/items/backup_magazine.png"/></div>
+                    <div id="bison_steak" class="common"><img src="images/items/bison_steak.png"/></div>
+                    <div id="bundle_of_fireworks" class="common"><img src="images/items/bundle_of_fireworks.png"/></div>
+                    <div id="bustling_fungus" class="common"><img src="images/items/bustling_fungus.png"/></div>
+                    <div id="cautious_slug" class="common"><img src="images/items/cautious_slug.png"/></div>
+                    <div id="crowbar" class="common"><img src="images/items/crowbar.png"/></div>
+                    <div id="delicate_watch" class="common dlc"><img src="images/items/Delicate_Watch.png"/></div>
+                    <div id="energy_drink" class="common"><img src="images/items/energy_drink.png"/></div>
+                    <div id="focus_crystal" class="common"><img src="images/items/Focus_Crystal.png"/></div>
+                    <div id="gasoline" class="common"><img src="images/items/gasoline.png"/></div>
+                    <div id="lens_maker_glasses" class="common"><img src="images/items/lens_maker_glasses.png"/></div>
+                    <div id="medkit" class="common"><img src="images/items/medkit.png"/></div>
+                    <div id="mocha" class="common dlc"><img src="images/items/Mocha.png"/></div>
+                    <div id="monster_tooth" class="common"><img src="images/items/monster_tooth.png"/></div>
+                    <div id="oddly_shaped_opal" class="common dlc"><img src="images/items/Oddly-shaped_Opal.png"/></div>
+                    <div id="pauls_goat_hoof" class="common"><img src="images/items/pauls_goat_hoof.png"/></div>
+                    <div id="personal_shield_generator" class="common"><img src="images/items/personal_shield_generator.png"/></div>
+                    <div id="power_elixir" class="common dlc"><img src="images/items/Power_Elixir.png"/></div>
+                    <div id="repulsion_armor_plate" class="common"><img src="images/items/Repulsion_Armor_Plate.png"/></div>
+                    <div id="roll_of_pennies" class="common dlc"><img src="images/items/Roll_of_Pennies.png"/></div>
+                    <div id="rusted_key" class="common"><img src="images/items/rusted_key.png"/></div>
+                    <div id="soldier_syringe" class="common"><img src="images/items/soldier_syringe.png"/></div>
+                    <div id="sticky_bomb" class="common"><img src="images/items/sticky_bomb.png"/></div>
+                    <div id="stun_grenade" class="common"><img src="images/items/stun_grenade.png"/></div>
+                    <div id="topaz_brooch" class="common"><img src="images/items/topaz_brooch.png"/></div>
+                    <div id="tougher_times" class="common"><img src="images/items/tougher_times.png"/></div>
+                    <div id="tri_tip_dagger" class="common"><img src="images/items/tri_tip_dagger.png"/></div>
+                    <div id="warbanner" class="common"><img src="images/items/warbanner.png"/></div>
+                    <!-- UNCOMMONS -->
+                    <div id="atg_missile_mk" class="uncommon"><img src="images/items/AtG_Missile_Mk._1.png"/></div>
+                    <div id="bandolier" class="uncommon"><img src="images/items/Bandolier.png"/></div>
+                    <div id="berzerkers_pauldron" class="uncommon"><img src="images/items/Berzerkers_Pauldron.png"/></div>
+                    <div id="chronobauble" class="uncommon"><img src="images/items/Chronobauble.png"/></div>
+                    <div id="death_mark" class="uncommon"><img src="images/items/Death_Mark.png"/></div>
+                    <div id="fuel_cell" class="uncommon"><img src="images/items/Fuel_Cell.png"/></div>
+                    <div id="ghors_tome" class="uncommon"><img src="images/items/Ghors_Tome.png"/></div>
+                    <div id="harvesters_scythe" class="uncommon"><img src="images/items/Harvesters_Scythe.png"/></div>
+                    <div id="hopoo_feather" class="uncommon"><img src="images/items/Hopoo_Feather.png"/></div>
+                    <div id="hunters_harpoon" class="uncommon dlc"><img src="images/items/Hunters_Harpoon.png"/></div>
+                    <div id="ignition_tank" class="uncommon dlc"><img src="images/items/Ignition_Tank.png"/></div>
+                    <div id="infusion" class="uncommon"><img src="images/items/Infusion.png"/></div>
+                    <div id="kjaros_band" class="uncommon"><img src="images/items/Kjaros_Band.png"/></div>
+                    <div id="leeching_seed" class="uncommon"><img src="images/items/Leeching_Seed.png"/></div>
+                    <div id="lepton_daisy" class="uncommon"><img src="images/items/Lepton_Daisy.png"/></div>
+                    <div id="old_guillotine" class="uncommon"><img src="images/items/Old_Guillotine.png"/></div>
+                    <div id="old_war_stealthkit" class="uncommon"><img src="images/items/Old_War_Stealthkit.png"/></div>
+                    <div id="predatory_instincts" class="uncommon"><img src="images/items/Predatory_Instincts.png"/></div>
+                    <div id="razorwire" class="uncommon"><img src="images/items/Razorwire.png"/></div>
+                    <div id="red_whip" class="uncommon"><img src="images/items/Red_Whip.png"/></div>
+                    <div id="regenerating_scrap" class="uncommon dlc"><img src="images/items/Regenerating_Scrap.png"/></div>
+                    <div id="rose_buckler" class="uncommon"><img src="images/items/Rose_Buckler.png"/></div>
+                    <div id="runalds_band" class="uncommon"><img src="images/items/Runalds_Band.png"/></div>
+                    <div id="shipping_request_form" class="uncommon dlc"><img src="images/items/Shipping_Request_Form.png"/></div>
+                    <div id="shuriken" class="uncommon dlc"><img src="images/items/Shuriken.png"/></div>
+                    <div id="squid_polyp" class="uncommon"><img src="images/items/Squid_Polyp.png"/></div>
+                    <div id="ukulele" class="uncommon"><img src="images/items/Ukulele.png"/></div>
+                    <div id="war_horn" class="uncommon"><img src="images/items/War_Horn.png"/></div>
+                    <div id="wax_quail" class="uncommon"><img src="images/items/Wax_Quail.png"/></div>
+                    <div id="will_o_wisp" class="uncommon"><img src="images/items/Will-o-the-wisp.png"/></div>
+                    <!-- LEGENDARYS -->
+                    <div id="57_leaf_clover" class="legendary"><img src="images/items/57_Leaf_Clover.png"/></div>
+                    <div id="aegis" class="legendary"><img src="images/items/Aegis.png"/></div>
+                    <div id="alien_head" class="legendary"><img src="images/items/Alien_Head.png"/></div>
+                    <div id="bens_raincoat" class="legendary dlc"><img src="images/items/Bens_Raincoat.png"/></div>
+                    <div id="bottled_chaos" class="legendary dlc"><img src="images/items/Bottled_Chaos.png"/></div>
+                    <div id="brainstalks" class="legendary"><img src="images/items/Brainstalks.png"/></div>
+                    <div id="brilliant_behemoth" class="legendary"><img src="images/items/Brilliant_Behemoth.png"/></div>
+                    <div id="ceremonial_dagger" class="legendary"><img src="images/items/Ceremonial_Dagger.png"/></div>
+                    <div id="defensive_microbots" class="legendary"><img src="images/items/Defensive_Microbots.png"/></div>
+                    <div id="dios_best_friend" class="legendary"><img src="images/items/Dios_Best_Friend.png"/></div>
+                    <div id="frost_relic" class="legendary"><img src="images/items/Frost_Relic.png"/></div>
+                    <div id="h3ad_5t_v2" class="legendary"><img src="images/items/H3AD-5T_v2.png"/></div>
+                    <div id="happiest_mask" class="legendary"><img src="images/items/Happiest_Mask.png"/></div>
+                    <div id="hardlight_afterburner" class="legendary"><img src="images/items/Hardlight_Afterburner.png"/></div>
+                    <div id="interstellar_desk_plant" class="legendary"><img src="images/items/Interstellar_Desk_Plant.png"/></div>
+                    <div id="laser_scope" class="legendary dlc"><img src="images/items/Laser_Scope.png"/></div>
+                    <div id="n_kuhanas_opinion" class="legendary"><img src="images/items/N27s_Opinion.png"/></div>
+                    <div id="pocket_icbm" class="legendary dlc"><img src="images/items/Pocket_I.C.B.M..png"/></div>
+                    <div id="rejuvenation_rack" class="legendary"><img src="images/items/Rejuvenation_Rack.png"/></div>
+                    <div id="resonance_disc" class="legendary"><img src="images/items/Resonance_Disc.png"/></div>
+                    <div id="sentient_meat_hook" class="legendary"><img src="images/items/Sentient_Meat_Hook.png"/></div>
+                    <div id="shattering_justice" class="legendary"><img src="images/items/Shattering_Justice.png"/></div>
+                    <div id="soulbound_catalyst" class="legendary"><img src="images/items/Soulbound_Catalyst.png"/></div>
+                    <div id="spare_drone_parts" class="legendary dlc"><img src="images/items/Spare_Drone_Parts.png"/></div>
+                    <div id="symbiotic_scorpion" class="legendary dlc"><img src="images/items/Symbiotic_Scorpion.png"/></div>
+                    <div id="unstable_tesla_coil" class="legendary"><img src="images/items/Unstable_Tesla_Coil.png"/></div>
+                    <div id="wake_of_vultures" class="legendary"><img src="images/items/Wake_of_Vultures.png"/></div>
+                    <!-- BOSS -->
+                    <div id="" class="boss"><img src="images/items/"/></div>
+                    <!-- LUNARS -->
+                    <div id="" class="lunar"><img src="images/items/"/></div>
+                </div>
+                <h2>EQUIPMENT</h2>
+                <div id="activeItem" class="container">
+                    <!-- Class for equipment & class to specify DLC -->
+                    <!-- STANDARD -->
+                    <div id="blast_shower" class="equipment"><img src="images/items/Blast_Shower.png"/></div>
+                    <div id="disposable_missile_launcher" class="equipment"><img src="images/items/Disposable_Missile_Launcher.png"/></div>
+                    <div id="eccentric_vase" class="equipment"><img src="images/items/Eccentric_Vase.png"/></div>
+                    <div id="executive_card" class="equipment dlc"><img src="images/items/Executive_Card.png"/></div>
+                    <div id="foreign_fruit" class="equipment"><img src="images/items/Foreign_Fruit.png"/></div>
+                    <div id="forgive_me_please" class="equipment"><img src="images/items/Forgive_Me_Please.png"/></div>
+                    <div id="" class="equipment"><img src="images/items/"/></div>
+                    <!-- LUNAR -->
+                    <div id="" class="lunar"><img src="images/items/"/></div>
+                </div>
+                <!-- DLC ONLY CONTENT -->
+                <h2 class="dlc">VOID ITEMS</h2>
+                <div id="voidItem" class="container dlc">
+                    <div id="benthic_bloom" class="void"><img src="images/items/Benthic_Bloom.png"/></div>
+                    <div id="encrusted_key" class="void"><img src="images/items/Encrusted_Key.png"/></div>
+                    <div id="lost_seers_lenses" class="void"><img src="images/items/Lost_Seers_Lenses.png"/></div>
+                    <div id="lysate_cell" class="void"><img src="images/items/Lysate_Cell.png"/></div>
+                    <div id="" class="void"><img src="images/items/"/></div>
+                </div>
             </div>
-            <!-- DLC ONLY CONTENT -->
-            <h2 class="dlc">VOID ITEMS</h2>
-            <div id="voidItem" class="container dlc">
-                <div id="benthic_bloom" class="void"><img src="images/items/Benthic_Bloom.png"/></div>
-                <div id="encrusted_key" class="void"><img src="images/items/Encrusted_Key.png"/></div>
-                <div id="lost_seers_lenses" class="void"><img src="images/items/Lost_Seers_Lenses.png"/></div>
-                <div id="lysate_cell" class="void"><img src="images/items/Lysate_Cell.png"/></div>
-                <div id="" class="void"><img src="images/items/"/></div>
-            </div>
-        </div>
+        </main>
         <div id="sidebar">
             <!-- Sidebar with item details -->
             <!-- Empty h2 element to fill with item name -->
@@ -186,12 +188,12 @@
             <!-- DESKTOP ONLY Fieldset for filters -->
             <fieldset id="filter">
                 <legend>Item Filter:</legend>
-                <input class="dlc_check" type="checkbox" name="DLC" checked><label for="DLC">Show DLC</label>
-                <input class="common_check" type="checkbox" name="COMMONS" checked><label for="DLC">Common</label><br><!-- Line break keeps to 2 items a row -->
-                <input class="uncommon_check" type="checkbox" name="UNCOMMONS" checked><label for="DLC">Uncommon</label>
-                <input class="legendary_check" type="checkbox" name="LEGENDARYS" checked><label for="DLC">Legendary</label><br><!-- Line break keeps to 2 items a row -->
-                <input class="boss_check" type="checkbox" name="BOSS" checked><label for="DLC">Boss</label>
-                <input class="lunar_check" type="checkbox" name="LUNARS" checked><label for="DLC">Lunar</label>
+                <label for="DLC"><input class="dlc_check" type="checkbox" name="DLC" checked>Show DLC</label>
+                <label for="COMMONS"><input class="common_check" type="checkbox" name="COMMONS" checked>Common</label><br><!-- Line break keeps to 2 items a row -->
+                <label for="UNCOMMONS"><input class="uncommon_check" type="checkbox" name="UNCOMMONS" checked>Uncommon</label>
+                <label for="LEGENDARYS"><input class="legendary_check" type="checkbox" name="LEGENDARYS" checked>Legendary</label><br><!-- Line break keeps to 2 items a row -->
+                <label for="BOSS"><input class="boss_check" type="checkbox" name="BOSS" checked>Boss</label>
+                <label for="LUNARS"><input class="lunar_check" type="checkbox" name="LUNARS" checked>Lunar</label>
             </fieldset>
         </div>
     </body>
