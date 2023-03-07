@@ -49,7 +49,7 @@ function resizeHeight () {
     //JS Media Query to perform function only when viewport is 768px or less
     let phoneMedia = window.matchMedia("(max-width: 768px)");
     if (phoneMedia.matches) {
-        document.body.style.height = elemHeight + 180 +"px";
+        document.body.style.height = elemHeight + 184 +"px";
     }
 };
 new ResizeObserver(resizeHeight).observe(main);
