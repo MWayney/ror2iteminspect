@@ -616,7 +616,7 @@ $("#lost_seers_lenses").mouseenter(function(){
                             "<span class='corrupt'>Corrupts all Lens-Maker's Glasses</span>.<br> Your attacks have a <span class='util'>0.5%</span> <span class='stack'>(+0.5% per stack)</span> <span class='util'>chance</span> to <span class='dmg'>instantly kill</span> a <span class='dmg'>non-boss enemy</span>."
                     );
 });
-$("#lost_seer_lenses").mouseleave(sidebarReset);
+$("#lost_seers_lenses").mouseleave(sidebarReset);
 //Lysate Cell
 $("#lysate_cell").mouseenter(function(){
     sidebarReset();
