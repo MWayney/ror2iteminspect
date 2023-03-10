@@ -677,7 +677,7 @@ $("#safer_spaces").mouseleave(sidebarReset);
 $("#singularity_band").mouseenter(function(){
     sidebarReset();
     itemDisplay.call(this,  "Singularity Band",
-                            "<span class='corrupt'>Corrupts all Runald's and Kjaro's Bands</span>.<br> When an attack deals <span class='dmg'>400% or more damage</span>, fire a <span class='util'>black hole</span> that <span class='util'>draws enemies within 15m into its center</span>. After <span class='util'>5s</span> the black hole collapses, dealing <span class='dmg'>100% <span class='stack'>(+100% per stack)</span> attack damage</span>. <span class='util'>Recharges after 20s</span>."
+                            "<span class='corrupt'>Corrupts all Runald's and Kjaro's Bands</span>.<br> When an attack deals <span class='dmg'>400% or more damage</span>, fire a <span class='util'>black hole</span> that <span class='util'>draws enemies within 15m into its center</span>, collapsing after <span class='util'>5s</span>, dealing <span class='dmg'>100% <span class='stack'>(+100% per stack)</span> attack damage</span>. <span class='util'>Recharges after 20s</span>."
                     );
 });
 $("#singularity_band").mouseleave(sidebarReset);
