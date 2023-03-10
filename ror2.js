@@ -492,7 +492,7 @@ $("#egocentrism").mouseleave(sidebarReset);
 $("#essence_of_heresy").mouseenter(function(){
     sidebarReset();
     itemDisplay.call(this,  "Essence of Heresy",
-                            "<span class='util'>Replace your Special Skill</span> with <span class='util'>Ruin</span>.<br><span class='dmg'>Dealing damage</span> adds a <span class='util'>stack of Ruin</span> for <span class='util'>10s</span> <span class='stack'>(+10 per stack)</span>. Activating the skill <span class='dmg'>detonates all stacks</span> dealing <span class='dmg'>300% damage +120% damage per stack of Ruin</span>. <span class='util'>Recharges after 8s</span> <span class='stack'>(+8s per stack)</span>."
+                            "<span class='util'>Replace Special Skill</span> with <span class='util'>Ruin</span>.<br><span class='dmg'>Dealing damage</span> adds a <span class='util'>stack of Ruin</span> for <span class='util'>10s</span> <span class='stack'>(+10 per stack)</span>. Activating the skill <span class='dmg'>detonates all stacks</span> dealing <span class='dmg'>300% damage +120% damage per stack</span>. <span class='util'>Recharges after 8s</span> <span class='stack'>(+8s per stack)</span>."
                     );
 });
 $("#essence_of_heresy").mouseleave(sidebarReset);
@@ -524,7 +524,7 @@ $("#gesture_of_drowned").mouseleave(sidebarReset);
 $("#hooks_of_heresy").mouseenter(function(){
     sidebarReset();
     itemDisplay.call(this,  "Hooks of Heresy",
-                            "<span class='util'>Replace your Secondary Skill</span> with <span class='util'>Slicing Maelstrom</span>.<br><span class='dmg'>Charge a projectile</span> that deals <span class='dmg'>875% damage per second</span> to nearby enemies, exploding after <span class='util'>3s</span> to deal <span class='dmg'>700% damage</span> and <span class='util'>root enemies</span> for <span class='util'>3s</span> <span class='stack'>(+3s per stack)</span>. <span class='util'>Recharges after 5s</span> <span class='stack'>(+5s per stack)</span>."
+                            "<span class='util'>Replace Secondary Skill</span> with <span class='util'>Slicing Maelstrom</span>.<br><span class='dmg'>Charge a projectile</span> that deals <span class='dmg'>875% damage per second</span> to nearby enemies, exploding after <span class='util'>3s</span> to deal <span class='dmg'>700% damage</span> and <span class='util'>root enemies</span> for <span class='util'>3s</span> <span class='stack'>(+3s per stack)</span>. <span class='util'>Recharges after 5s</span> <span class='stack'>(+5s per stack)</span>."
                     );
 });
 $("#hooks_of_heresy").mouseleave(sidebarReset);
