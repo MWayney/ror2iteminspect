@@ -165,7 +165,7 @@ p {
 }
 .boss {
     border: solid 2px;
-    border-color: rgb(180, 215, 0, 0.7);
+    border-color: rgba(180, 215, 0, 0.7);
     background-color: rgba(190, 205, 10, 0.3);
 }
 .boss:hover {
@@ -216,4 +216,8 @@ p {
 .stack {
     font-style: oblique;
     color:rgb(128, 128, 128);
+}
+/* Corrupt */
+.corrupt {
+    color: rgb(255, 100, 180);
 }
