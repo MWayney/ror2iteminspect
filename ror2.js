@@ -46,7 +46,7 @@ function sidebarReset() {
 //Used for adding extra space to the bottom of <body> so that items are unobscured by 'fixed' sidebar
 function resizeHeight () {
     let elemHeight = $("#main").height();
-    //JS Media Query to perform function only when viewport is less than 1024px
+    //JS Media Query to perform function only when viewport is 768px or less
     let phoneMedia = window.matchMedia("(max-width: 1023px)");
     if (phoneMedia.matches) {
         document.body.style.height = elemHeight + 200 +"px";
@@ -98,7 +98,7 @@ $("#bundle_of_fireworks").mouseleave(sidebarReset);
 $("#bustling_fungus").mouseenter(function(){
     sidebarReset();
     itemDisplay.call(this,  "Bustling Fungus",
-                            "After standing still for <span class='hpUP'>1s</span>, create a zone that <span class='hpUP'>heals</span> for <span class='hpUP'>4.5%</span> <span class='stack'>(+2.25% per stack)</span> of your health <span class='hpUP'>every second</span> to all allies <span class='util'>within 3m</span> <span class='stack'>(+1.5m per stack)</span>."
+                            "After <span class='util'>standing still</span> for <span class='hpUP'>1s</span>, create a zone that <span class='hpUP'>heals</span> for <span class='hpUP'>4.5%</span> <span class='stack'>(+2.25% per stack)</span> of your health <span class='hpUP'>every second</span> to all allies <span class='util'>within 3m</span> <span class='stack'>(+1.5m per stack)</span>."
                     );
 });
 $("#bustling_fungus").mouseleave(sidebarReset);
@@ -106,7 +106,7 @@ $("#bustling_fungus").mouseleave(sidebarReset);
 $("#cautious_slug").mouseenter(function(){
     sidebarReset();
     itemDisplay.call(this,  "Cautious Slug",
-                            "Increases <span class='hpUP'>base health regen</span> by <span class='hpUP'>+3 hp/s</span> <span class='stack'>(+3 hp/s per stack)</span> while outside of combat."
+                            "Increases <span class='hpUP'>base health regen</span> by <span class='hpUP'>+3 hp/s</span> <span class='stack'>(+3 hp/s per stack)</span> while <span class='util'>outside of combat</span>."
                     );
 });
 $("#cautious_slug").mouseleave(sidebarReset);
@@ -122,7 +122,7 @@ $("#crowbar").mouseleave(sidebarReset);
 $("#delicate_watch").mouseenter(function(){
     sidebarReset();
     itemDisplay.call(this,  "Delicate Watch",
-                            "Increase <span class='dmg'>damage</span> by <span class='dmg'>+20%</span> <span class='stack'>(+20% per stack)</span>. Taking damage to below <span class='hpLimit'>25% health</span> breaks this item."
+                            "Increase <span class='dmg'>damage</span> by <span class='dmg'>+20%</span> <span class='stack'>(+20% per stack)</span>. Taking damage to below <span class='hpLimit'>25% health</span> <span class='util'>breaks this item</span>."
                     );
 });
 $("#delicate_watch").mouseleave(sidebarReset);
@@ -403,7 +403,7 @@ $("#infusion").mouseleave(sidebarReset);
 $("#kjaros_band").mouseenter(function(){
     sidebarReset();
     itemDisplay.call(this,  "Kjaro's Band",
-                            "When a single attack deals <span class='dmg'>400% or more damage</span>, enemies are hit with a <span class='dmg'>runic flame tornado</span>, dealing <span class='dmg'>300%</span> <span class='stack'>(+300% per stack)</span> <span class='dmg'>attack damage</span> over time. Recharges every <span class='util'>10s</span>."
+                            "When an attack deals <span class='dmg'>400% or more damage</span>, enemies are hit with a <span class='dmg'>runic flame tornado</span>, dealing <span class='dmg'>300%</span> <span class='stack'>(+300% per stack)</span> <span class='dmg'>attack damage</span> over time. Recharges every <span class='util'>10s</span>."
                     );
 });
 $("#kjaros_band").mouseleave(sidebarReset);
@@ -452,7 +452,7 @@ $("#predatory_instincts").mouseleave(sidebarReset);
 $("#beads_of_fealty").mouseenter(function(){
     sidebarReset();
     itemDisplay.call(this,  "Beads of Fealty",
-                            "Seems to do nothing... <span class='hpLimit'>but...</span> When you activate <span class='util'>The Obelisk</span> you are transported to <span class='util'>A Moment, Whole</span> before <span class='hpLimit'>ending the run</span>. <span class='stack'>(No benefit on stack)</span>."
+                            "Seems to do nothing... <span class='hpLimit'>but...</span> When you activate <span class='util'>The Obelisk</span> you are transported to <span class='util'>A Moment, Whole</span> before <span class='hpLimit'>ending the run</span>."
                     );
 });
 $("#beads_of_fealty").mouseleave(sidebarReset);
@@ -492,7 +492,7 @@ $("#egocentrism").mouseleave(sidebarReset);
 $("#essence_of_heresy").mouseenter(function(){
     sidebarReset();
     itemDisplay.call(this,  "Essence of Heresy",
-                            "<span class='util'>Replace Special Skill</span> with <span class='util'>Ruin</span>.<br><span class='dmg'>Dealing damage</span> adds a <span class='util'>stack of Ruin</span> for <span class='util'>10s</span> <span class='stack'>(+10 per stack)</span>. Activating the skill <span class='dmg'>detonates all stacks</span> dealing <span class='dmg'>300% damage +120% damage per stack</span>. <span class='util'>Recharges after 8s</span> <span class='stack'>(+8s per stack)</span>."
+                            "<span class='util'>Replace your Special Skill</span> with <span class='util'>Ruin</span>.<br><span class='dmg'>Dealing damage</span> adds a <span class='util'>stack of Ruin</span> for <span class='util'>10s</span> <span class='stack'>(+10 per stack)</span>. Activating the skill <span class='dmg'>detonates all stacks</span> dealing <span class='dmg'>300% damage +120% damage per stack of Ruin</span>. <span class='util'>Recharges after 8s</span> <span class='stack'>(+8s per stack)</span>."
                     );
 });
 $("#essence_of_heresy").mouseleave(sidebarReset);
@@ -524,9 +524,186 @@ $("#gesture_of_drowned").mouseleave(sidebarReset);
 $("#hooks_of_heresy").mouseenter(function(){
     sidebarReset();
     itemDisplay.call(this,  "Hooks of Heresy",
-                            "<span class='util'>Replace Secondary Skill</span> with <span class='util'>Slicing Maelstrom</span>.<br><span class='dmg'>Charge a projectile</span> that deals <span class='dmg'>875% damage per second</span> to nearby enemies, exploding after <span class='util'>3s</span> to deal <span class='dmg'>700% damage</span> and <span class='util'>root enemies</span> for <span class='util'>3s</span> <span class='stack'>(+3s per stack)</span>. <span class='util'>Recharges after 5s</span> <span class='stack'>(+5s per stack)</span>."
+                            "<span class='util'>Replace your Secondary Skill</span> with <span class='util'>Slicing Maelstrom</span>.<br><span class='dmg'>Charge a projectile</span> that deals <span class='dmg'>875% damage per second</span> to nearby enemies, exploding after <span class='util'>3s</span> to deal <span class='dmg'>700% damage</span> and <span class='util'>root enemies</span> for <span class='util'>3s</span> <span class='stack'>(+3s per stack)</span>. <span class='util'>Recharges after 5s</span> <span class='stack'>(+5s per stack)</span>."
                     );
 });
 $("#hooks_of_heresy").mouseleave(sidebarReset);
+//Light Flux Pauldron
+$("#light_flux_pauldron").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Light Flux Pauldron",
+                            "Decrease <span class='util'>skill cooldowns</span> by <span class='util'>50% <span class='stack'>(+50% per stack)</span></span>. Decrease <span class='dmg'>attack speed</span> by <span class='dmg'>50% <span class='dmg'>(+50% per stack)</span></span>."
+                    );
 });
+$("#light_flux_pauldron").mouseleave(sidebarReset);
+//Mercurial Rachis
+$("#mercurial_rachis").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Mercurial Rachis",
+                            "Creates a <span class='util'>Ward of Power</span> in a <span class='util'>random location</span> nearby that <span class='util'>buffs all allies and enemies within 16m</span> <span class='stack'>(+50% per stack)</span>, causing them to deal <span class='dmg'>+50% damage</span>."
+                    );
+});
+$("#mercurial_rachis").mouseleave(sidebarReset);
+//Purity
+$("#purity").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Purity",
+                            "All <span class='util'>skill cooldowns</span> are reduced by <span class='util'>2s <span class='stack'>(+1s per stack)</span></span>. All <span class='util'>random effects</span> are <span class='util'>rolled +1<span class='stack'>(+1 per stack)</span> times</span> for an <span class='hpLimit'>unfavourable outcome</span>."
+                    );
+});
+$("#purity").mouseleave(sidebarReset);
+//Shaped Glass
+$("#shaped_glass").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Shaped Glass",
+                            "Increase <span class='dmg'>base damage</span> by <span class='dmg'>100% <span class='stack'>(+100% per stack)</span></span>. Reduce <span class='hpUP'>Maximum Health</span> by <span class='hpLimit'>50%<span class='stack'>(+50% per stack)</span></span>."
+                    );
+});
+$("#shaped_glass").mouseleave(sidebarReset);
+//Stone Flux Pauldron
+$("#stone_flux_pauldron").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Stone Flux Pauldron",
+                            "Increase <span class='hpUP'>Maximum Health</span> by <span class='hpUP'>100% <span class='stack'>(+100% per stack)</span></span>. Reduce <span class='util'>movement speed</span> by <span class='hpLimit'>50%<span class='stack'>(+50% per stack)</span></span>."
+                    );
+});
+$("#stone_flux_pauldron").mouseleave(sidebarReset);
+//Strides of Heresy
+$("#strides_of_heresy").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Strides of Heresy",
+                            "<span class='util'>Replace your Utility Skill</span> with <span class='util'>Shadowfade</span>.<br>Fade away, becoming <span class='util'>intangible</span> and gaining <span class='util'>+30% movement speed</span>. <span class='hpUP'>Heal</span> for <span class='hpUP'>18.2% <span class='stack'>(+18.2% per stack)</span></span> of your <span class='hpUP'>Maximum Health</span>. Lasts <span class='util'>3s <span class='stack'>(+3s per stack)</span></span>."
+                    );
+});
+$("#strides_of_heresy").mouseleave(sidebarReset);
+//Transcendence
+$("#transcendence").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Transcendence",
+                            "Gain <span class='hpUP'>+50% <span class='stack'>(+25% per stack)</span> Maximum Health</span>. Convert <span class='hpLimit'>all but 1 health</span> into <span class='hpUP'>regenerating shields</span>."
+                    );
+});
+$("#transcendence").mouseleave(sidebarReset);
+//Visions of Heresy
+$("#visions_of_heresy").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Visions of Heresy",
+                            "<span class='util'>Replace your Primary Skill</span> with <span class='util'>Hungering Gaze</span>.<br><span class='dmg'>Fire</span> a flurry of <span class='util'>tracking shards</span> that <span class='dmg'>detonate</span> after a delay, dealing <span class='dmg'>120% base damage</span>. Can hold up to <span class='util'>12 <span class='stack'>(+12 per stack)</span> charges</span> that reload after <span class='util'>2s <span class='stack'>(+2s per stack)</span></span>."
+                    );
+});
+$("#visions_of_heresy").mouseleave(sidebarReset);
+//------------------------------   VOID    ------------------------------------------
+//Benthic Bloom
+$("#benthic_bloom").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Benthic Bloom",
+                            "<span class='corrupt'>Corrupts all 57 Leaf Clovers</span>.<br> <span class='util'>Upgrades 3</span> <span class='stack'>(+3 per stack)</span> <span class='util'>random items</span> to items of the next <span class='util'>rarity</span> at the <span class='util'>start of each stage</span>."
+                    );
+});
+$("#benthic_bloom").mouseleave(sidebarReset);
+//Encrusted Key
+$("#encrusted_key").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Encrusted Key",
+                            "<span class='corrupt'>Corrupts all Rusted Keys</span>.<br> Gain a key that opens a <span class='util'>hidden cache</span> containing an item (60%/<span class='hpUP'>30%</span>/<span class='hpLimit'>10%</span>) in a random location on <span class='util'>each future stage</span>. Opening the cache <span class='util'>consumes</span> this item."
+                    );
+});
+$("#encrusted_key").mouseleave(sidebarReset);
+//Lost Seer's Lenses
+$("#lost_seers_lenses").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Lost Seer's Lenses",
+                            "<span class='corrupt'>Corrupts all Lens-Maker's Glasses</span>.<br> Your attacks have a <span class='util'>0.5%</span> <span class='stack'>(+0.5% per stack)</span> <span class='util'>chance</span> to <span class='dmg'>instantly kill</span> a <span class='dmg'>non-boss enemy</span>."
+                    );
+});
+$("#lost_seer_lenses").mouseleave(sidebarReset);
+//Lysate Cell
+$("#lysate_cell").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Lysate Cell",
+                            "<span class='corrupt'>Corrupts all Fuel Cells</span>.<br> Add <span class='util'>+1</span> <span class='stack'>(+1 per stack)</span> <span class='util'>charge</span> of your <span class='util'>Special Skill</span>. <span class='util'>Reduces Special Skill cooldown</span> by <span class='util'>33%</span>."
+                    );
+});
+$("#lysate_cell").mouseleave(sidebarReset);
+//Needletick
+$("#needletick").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Needletick",
+                            "<span class='corrupt'>Corrupts all Tri-Tip Daggers</span>.<br> <span class='util'>+10% <span class='stack'>(+10% per stack)</span> chance</span> to <span class='dmg'>collapse</span> an enemy for <span class='dmg'>400% base damage</span>."
+                    );
+});
+$("#needletick").mouseleave(sidebarReset);
+//Newly Hatched Zoea
+$("#newly_hatched_zoea").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Newly Hatched Zoea",
+                            "<span class='corrupt'>Corrupts all <span style='color:rgb(230, 215, 40);font-weight: bold'>Boss</span> items</span>.<br> Every <span class='util'>60s</span> <span class='stack'>(-50% per stack)</span>, gain a <span class='util'>random <span class='corrupt'>Void</span> ally</span>. Can have up to <span class='util'>1 <span class='stack'>(+1 per stack)</span> allies</span> at a time."
+                    );
+});
+$("#newly_hatched_zoea").mouseleave(sidebarReset);
+//Plasma Shrimp
+$("#plasma_shrimp").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Plasma Shrimp",
+                            "<span class='corrupt'>Corrupts all AtG Missile Mk.1s</span>.<br> Gain a <span class='hpUP'>shield</span> equal to <span class='hpUP'>10%</span> of your <span class='hpUP'>Maximum Health</span>. While you have a <span class='hpUP'>shield</span>, <span class='dmg'>hitting an enemy</span> fires a <span class='dmg'>missile</span> that deals <span class='dmg'>40% <span class='stack'>(+40% per stack)</span> attack damage</span>."
+                    );
+});
+$("#plasma_shrimp").mouseleave(sidebarReset);
+//Pluripotent Larva
+$("#pluripotent_larva").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Pluripotent Larva",
+                            "<span class='corrupt'>Corrupts all Dio's Best Friends</span>.<br> <span class='hpLimit'>Upon death</span>, <span class='hpUP'>return to life</span> with <span class='hpUP'>3s of invulnerability</span>, <span class='corrupt'>corrupting all items</span> that can be. Item is <span class='util'>consumed</span> on use."
+                    );
+});
+$("#pluripotent_larva").mouseleave(sidebarReset);
+//Polylute
+$("#polylute").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Polylute",
+                            "<span class='corrupt'>Corrupts all Ukuleles</span>.<br> <span class='util'>25% chance</span> to fire <span class='dmg'>lightning</span> for <span class='dmg'>60% attack damage</span> up to <span class='dmg'>3 <span class='stack'>(+3 per stack)</span> times</span>."
+                    );
+});
+$("#polylute").mouseleave(sidebarReset);
+//Safer Spaces
+$("#safer_spaces").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Safer Spaces",
+                            "<span class='corrupt'>Corrupts all Tougher Times</span>.<br> <span class='hpUP'>Blocks</span> <span class='dmg'>incoming damage</span> once. <span class='util'>Recharges after 15s <span class='stack'>(-10% per stack)</span></span>."
+                    );
+});
+$("#safer_spaces").mouseleave(sidebarReset);
+//Singularity Band
+$("#singularity_band").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Singularity Band",
+                            "<span class='corrupt'>Corrupts all Runald's and Kjaro's Bands</span>.<br> When an attack deals <span class='dmg'>400% or more damage</span>, fire a <span class='util'>black hole</span> that <span class='util'>draws enemies within 15m into its center</span>. After <span class='util'>5s</span> the black hole collapses, dealing <span class='dmg'>100% <span class='stack'>(+100% per stack)</span> attack damage</span>. <span class='util'>Recharges after 20s</span>."
+                    );
+});
+$("#singularity_band").mouseleave(sidebarReset);
+//Tentabauble
+$("#tentabauble").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Tentabauble",
+                            "<span class='corrupt'>Corrupts all Chronobaubles</span>.<br> <span class='util'>5% <span class='stack'>(+5% per stack)</span> chance</span> on hit to <span class='util'>root</span> enemies for <span class='util'>1s</span> <span class='stack'>(+1s per stack)</span>."
+                    );
+});
+$("#tentabauble").mouseleave(sidebarReset);
+//Voidsent Flame
+$("#voidsent_flame").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Voidsent Flame",
+                            "<span class='corrupt'>Corrupts all Will-o'-the-Wisps</span>.<br> Hitting <span class='dmg'>enemies at full health</span> spawns a <span class='dmg'>lava pillar</span> in a <span class='util'>12m <span class='stack'>(+2.4m per stack)</span> radius</span> for <span class='dmg'>260% <span class='stack'>(+156% per stack)</span> base damage</span>."
+                    );
+});
+$("#voidsent_flame").mouseleave(sidebarReset);
+//Weeping Fungus
+$("#weeping_fungus").mouseenter(function(){
+    sidebarReset();
+    itemDisplay.call(this,  "Weeping Fungus",
+                            "<span class='corrupt'>Corrupts all Bustling Fungus</span>.<br> <span class='hpUP'>Heals</span> for <span class='hpUP'>2% <span class='stack'>(+2% per stack)</span></span> of your <span class='hpUP'>Maximum Health</span> every second <span class='util'>while sprinting</span>."
+                    );
+});
+$("#weeping_fungus").mouseleave(sidebarReset);
 
+});
