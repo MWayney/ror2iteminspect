@@ -46,8 +46,8 @@ function sidebarReset() {
 //Used for adding extra space to the bottom of <body> so that items are unobscured by 'fixed' sidebar
 function resizeHeight () {
     let elemHeight = $("#main").height();
-    //JS Media Query to perform function only when viewport is 768px or less
-    let phoneMedia = window.matchMedia("(max-width: 768px)");
+    //JS Media Query to perform function only when viewport is less than 1024px
+    let phoneMedia = window.matchMedia("(max-width: 1023px)");
     if (phoneMedia.matches) {
         document.body.style.height = elemHeight + 200 +"px";
     } else {
