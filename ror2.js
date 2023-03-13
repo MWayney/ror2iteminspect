@@ -25,39 +25,54 @@ $(".lunar_check").click(function() {
     $(".lunar").toggle(this.checked);
 });
 
+//JS Media variable to perform if-statements when viewport is less than 1024
+let phoneMedia = window.matchMedia("(max-width: 1023px)");
 //Functions for entering item notes into epmty elements
 //The append() and empty() methods are used so that HTML tags can be interpreted
-//1 line to hide <h2> element on page load
-$("#itemName").hide();
 function itemDisplay(item, itemText) {
     $("#itemName").show();
     $("#itemName").append(item);
     $("#itemDisplay").append(this.innerHTML);
     $("#itemDescription").append(itemText);
+    if (phoneMedia.matches) {
+        $("#sidebar").show();
+    }
 };
 function sidebarReset() {
     $("#itemName").hide();
     $("#itemName").empty();
     $("#itemDisplay").empty();
     $("#itemDescription").empty();
+    if (phoneMedia.matches) {
+        $("#sidebar").hide();
+    }
 };
 
 //Event Listener tied to resizing of #main element when scaling window
 //Used for adding extra space to the bottom of <body> so that items are unobscured by 'fixed' sidebar
 function resizeHeight () {
-    let elemHeight = $("#main").height();
-    //JS Media Query to perform function only when viewport is 768px or less
-    let phoneMedia = window.matchMedia("(max-width: 1023px)");
     if (phoneMedia.matches) {
-        document.body.style.height = elemHeight + 200 +"px";
+        document.body.style.paddingBottom = document.getElementById("sidebar").clientHeight + 4 + "px";
     } else {
-        document.body.style.height = elemHeight + "px";
+        document.body.style.paddingBottom = "4px";
     };
 };
 $(window).on("load", function() {
     resizeHeight();
 });
 window.addEventListener('resize', resizeHeight);
+//Mutation Observer to observe "sidebar" display property
+const target = document.getElementById("sidebar");
+const callback = (mutationList, observer) => {
+    mutationList.forEach((mutation) => {
+        if(mutation.type === "attributes") {
+            resizeHeight();
+            console.log("this thing")
+        }
+    });
+};
+const observer = new MutationObserver(callback);
+observer.observe(target, {attributes:true});
 
 //~1674 lines for every item
 //---------------------------   COMMON    -------------------------------------------
