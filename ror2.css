@@ -13,11 +13,11 @@
         width: 80px;
     } 
     #sidebar {
-        display: block;
+        display: none;
         background-color: rgb(72, 61, 139);
         position: fixed;
         bottom: 0;
-        height: 200px;
+        height: fit-content;
         width: 100%;
     }
     #sidebar fieldset {
